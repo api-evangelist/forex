@@ -1,131 +1,94 @@
+aid: forex
 name: Forex APIs
-description: A collection of foreign exchange and currency conversion APIs
-image: https://example.com/forex-apis-logo.png
-url: https://example.com/forex-apis
+description: A collection of foreign exchange and currency conversion APIs.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/forex/refs/heads/main/apis.yml
 created: '2024-01-15'
-modified: '2024-01-15'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 tags:
-- forex
-- currency
-- exchange rates
-- financial data
-- trading
+  - Forex
+  - Currency
+  - Exchange Rates
+  - Financial Data
+  - Trading
 apis:
-- name: Open Exchange Rates API
-  description: Real-time and historical exchange rates with simple JSON API
-  image: https://openexchangerates.org/logo.png
-  humanURL: https://openexchangerates.org
-  baseURL: https://openexchangerates.org/api
-  version: v1
-  tags:
-  - exchange rates
-  - currency conversion
-  - historical data
-  properties:
-  - type: Documentation
-    url: https://docs.openexchangerates.org
-  - type: OpenAPI
-    url: https://openexchangerates.org/openapi.json
-  - type: Pricing
-    url: https://openexchangerates.org/signup
-  - type: Authentication
-    url: https://docs.openexchangerates.org/authentication
-  contact:
-  - type: Support
-    url: https://openexchangerates.org/support
-  - type: Email
-    url: mailto:support@openexchangerates.org
-- name: Fixer.io API
-  description: Foreign exchange rates and currency conversion API
-  image: https://fixer.io/logo.png
-  humanURL: https://fixer.io
-  baseURL: https://api.fixer.io
-  version: v1
-  tags:
-  - exchange rates
-  - currency
-  - european central bank
-  properties:
-  - type: Documentation
-    url: https://fixer.io/documentation
-  - type: OpenAPI
-    url: https://fixer.io/openapi.yaml
-  - type: Pricing
-    url: https://fixer.io/product
-  - type: SignUp
-    url: https://fixer.io/signup
-  contact:
-  - type: Support
-    url: https://fixer.io/support
-  - type: Email
-    url: mailto:support@fixer.io
-- name: ExchangeRate-API
-  description: Free currency conversion API with 161 currencies
-  image: https://exchangerate-api.com/logo.png
-  humanURL: https://www.exchangerate-api.com
-  baseURL: https://v6.exchangerate-api.com/v6
-  version: v6
-  tags:
-  - free
-  - exchange rates
-  - currency conversion
-  properties:
-  - type: Documentation
-    url: https://www.exchangerate-api.com/docs
-  - type: Pricing
-    url: https://www.exchangerate-api.com/pricing
-  - type: Terms of Service
-    url: https://www.exchangerate-api.com/terms
-  contact:
-  - type: Email
-    url: mailto:contact@exchangerate-api.com
-- name: CurrencyAPI
-  description: Accurate and reliable foreign exchange rates API
-  image: https://currencyapi.com/logo.png
-  humanURL: https://currencyapi.com
-  baseURL: https://api.currencyapi.com/v3
-  version: v3
-  tags:
-  - forex
-  - real-time rates
-  - historical data
-  properties:
-  - type: Documentation
-    url: https://currencyapi.com/docs
-  - type: OpenAPI
-    url: https://currencyapi.com/openapi.json
-  - type: Pricing
-    url: https://currencyapi.com/pricing
-  - type: Status
-    url: https://status.currencyapi.com
-  contact:
-  - type: Support
-    url: https://currencyapi.com/support
-  - type: Twitter
-    url: https://twitter.com/currencyapi
-- name: Frankfurter API
-  description: Free and open-source API for current and historical forex rates
-  image: https://www.frankfurter.app/logo.png
-  humanURL: https://www.frankfurter.app
-  baseURL: https://api.frankfurter.app
-  version: latest
-  tags:
-  - free
-  - open source
-  - ECB
-  - exchange rates
-  properties:
-  - type: Documentation
-    url: https://www.frankfurter.app/docs
-  - type: GitHub
-    url: https://github.com/hakanensari/frankfurter
-  - type: OpenAPI
-    url: https://www.frankfurter.app/openapi.json
-  contact:
-  - type: GitHub
-    url: https://github.com/hakanensari/frankfurter/issues
+  - aid: forex:open-exchange-rates
+    name: Open Exchange Rates API
+    description: Real-time and historical exchange rates with simple JSON API
+    humanURL: https://openexchangerates.org
+    baseURL: https://openexchangerates.org/api
+    tags:
+      - Exchange Rates
+      - Currency Conversion
+      - Historical Data
+    properties:
+      - type: Documentation
+        url: https://docs.openexchangerates.org
+      - type: Pricing
+        url: https://openexchangerates.org/signup
+      - type: Authentication
+        url: https://docs.openexchangerates.org/authentication
+  - aid: forex:fixer
+    name: Fixer.io API
+    description: Foreign exchange rates and currency conversion API
+    humanURL: https://fixer.io
+    baseURL: https://api.fixer.io
+    tags:
+      - Exchange Rates
+      - Currency
+    properties:
+      - type: Documentation
+        url: https://fixer.io/documentation
+      - type: Pricing
+        url: https://fixer.io/product
+  - aid: forex:exchangerate-api
+    name: ExchangeRate-API
+    description: Free currency conversion API with 161 currencies
+    humanURL: https://www.exchangerate-api.com
+    baseURL: https://v6.exchangerate-api.com/v6
+    tags:
+      - Exchange Rates
+      - Currency Conversion
+    properties:
+      - type: Documentation
+        url: https://www.exchangerate-api.com/docs
+      - type: Pricing
+        url: https://www.exchangerate-api.com/pricing
+      - type: Terms of Service
+        url: https://www.exchangerate-api.com/terms
+  - aid: forex:currencyapi
+    name: CurrencyAPI
+    description: Accurate and reliable foreign exchange rates API
+    humanURL: https://currencyapi.com
+    baseURL: https://api.currencyapi.com/v3
+    tags:
+      - Forex
+      - Real-Time Rates
+      - Historical Data
+    properties:
+      - type: Documentation
+        url: https://currencyapi.com/docs
+      - type: Pricing
+        url: https://currencyapi.com/pricing
+      - type: Status
+        url: https://status.currencyapi.com
+  - aid: forex:frankfurter
+    name: Frankfurter API
+    description: Free and open-source API for current and historical forex rates
+    humanURL: https://www.frankfurter.app
+    baseURL: https://api.frankfurter.app
+    tags:
+      - Free
+      - Open Source
+      - Exchange Rates
+    properties:
+      - type: Documentation
+        url: https://www.frankfurter.app/docs
+      - type: GitHub Organization
+        url: https://github.com/hakanensari/frankfurter
 maintainers:
-- name: Forex API Directory
-  twitter: forexapis
-  email: contact@forexapis.example.com
-  url: https://example.com/forex-apis
+  - FN: Kin Lane
+    email: kin@apievangelist.com
