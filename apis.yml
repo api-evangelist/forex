@@ -9,10 +9,10 @@ created: '2024-01-15'
 modified: '2026-03-16'
 specificationVersion: '0.19'
 tags:
-  - Forex
   - Currency
   - Exchange Rates
   - Financial Data
+  - Forex
   - Trading
 apis:
   - aid: forex:open-exchange-rates
@@ -22,8 +22,8 @@ apis:
     humanURL: https://openexchangerates.org
     baseURL: https://openexchangerates.org/api
     tags:
-      - Exchange Rates
       - Currency Conversion
+      - Exchange Rates
       - Historical Data
     properties:
       - type: Documentation
@@ -39,8 +39,8 @@ apis:
     humanURL: https://fixer.io
     baseURL: https://api.fixer.io
     tags:
-      - Exchange Rates
       - Currency
+      - Exchange Rates
     properties:
       - type: Documentation
         url: https://fixer.io/documentation
@@ -53,8 +53,8 @@ apis:
     humanURL: https://www.exchangerate-api.com
     baseURL: https://v6.exchangerate-api.com/v6
     tags:
-      - Exchange Rates
       - Currency Conversion
+      - Exchange Rates
     properties:
       - type: Documentation
         url: https://www.exchangerate-api.com/docs
@@ -70,8 +70,8 @@ apis:
     baseURL: https://api.currencyapi.com/v3
     tags:
       - Forex
-      - Real-Time Rates
       - Historical Data
+      - Real-Time Rates
     properties:
       - type: Documentation
         url: https://currencyapi.com/docs
@@ -86,9 +86,9 @@ apis:
     humanURL: https://www.frankfurter.app
     baseURL: https://api.frankfurter.app
     tags:
+      - Exchange Rates
       - Free
       - Open Source
-      - Exchange Rates
     properties:
       - type: Documentation
         url: https://www.frankfurter.app/docs
