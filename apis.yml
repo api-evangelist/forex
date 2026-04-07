@@ -17,7 +17,8 @@ tags:
 apis:
   - aid: forex:open-exchange-rates
     name: Open Exchange Rates API
-    description: Real-time and historical exchange rates with simple JSON API
+    description: >-
+      Real-time and historical exchange rates with simple JSON API.
     humanURL: https://openexchangerates.org
     baseURL: https://openexchangerates.org/api
     tags:
@@ -33,7 +34,8 @@ apis:
         url: https://docs.openexchangerates.org/authentication
   - aid: forex:fixer
     name: Fixer.io API
-    description: Foreign exchange rates and currency conversion API
+    description: >-
+      Foreign exchange rates and currency conversion API.
     humanURL: https://fixer.io
     baseURL: https://api.fixer.io
     tags:
@@ -46,7 +48,8 @@ apis:
         url: https://fixer.io/product
   - aid: forex:exchangerate-api
     name: ExchangeRate-API
-    description: Free currency conversion API with 161 currencies
+    description: >-
+      Free currency conversion API with 161 currencies.
     humanURL: https://www.exchangerate-api.com
     baseURL: https://v6.exchangerate-api.com/v6
     tags:
@@ -61,7 +64,8 @@ apis:
         url: https://www.exchangerate-api.com/terms
   - aid: forex:currencyapi
     name: CurrencyAPI
-    description: Accurate and reliable foreign exchange rates API
+    description: >-
+      Accurate and reliable foreign exchange rates API.
     humanURL: https://currencyapi.com
     baseURL: https://api.currencyapi.com/v3
     tags:
@@ -77,7 +81,8 @@ apis:
         url: https://status.currencyapi.com
   - aid: forex:frankfurter
     name: Frankfurter API
-    description: Free and open-source API for current and historical forex rates
+    description: >-
+      Free and open-source API for current and historical forex rates.
     humanURL: https://www.frankfurter.app
     baseURL: https://api.frankfurter.app
     tags:
