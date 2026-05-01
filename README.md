@@ -1,62 +1,74 @@
-# Forex APIs (forex)
-A collection of foreign exchange and currency conversion APIs
+# Forex (forex)
 
-**URL:** [Visit APIs.json URL](https://example.com/forex-apis)
+A collection of foreign exchange and currency conversion APIs.
+
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/forex/refs/heads/main/apis.yml)
 
 ## Tags:
 
- - forex, currency, exchange rates, financial data, trading
+ - Currency
+ - Exchange Rates
+ - Financial Data
+ - Forex
+ - Trading
 
 ## Timestamps
 
-- **Created:** 2024-01-15 
-- **Modified:** 2024-01-15 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Open Exchange Rates API
-Real-time and historical exchange rates with simple JSON API
+
+Real-time and historical exchange rates with simple JSON API.
 
 **Human URL:** [https://openexchangerates.org](https://openexchangerates.org)
 
+**Base URL:** https://openexchangerates.org/api
 
 #### Tags:
 
- - exchange rates, currency conversion, historical data
+ - Currency Conversion
+ - Exchange Rates
+ - Historical Data
 
 #### Properties
 
 - [Documentation](https://docs.openexchangerates.org)
-- [OpenAPI](https://openexchangerates.org/openapi.json)
 - [Pricing](https://openexchangerates.org/signup)
 - [Authentication](https://docs.openexchangerates.org/authentication)
 
 ### Fixer.io API
-Foreign exchange rates and currency conversion API
+
+Foreign exchange rates and currency conversion API.
 
 **Human URL:** [https://fixer.io](https://fixer.io)
 
+**Base URL:** https://api.fixer.io
 
 #### Tags:
 
- - exchange rates, currency, european central bank
+ - Currency
+ - Exchange Rates
 
 #### Properties
 
 - [Documentation](https://fixer.io/documentation)
-- [OpenAPI](https://fixer.io/openapi.yaml)
 - [Pricing](https://fixer.io/product)
-- [SignUp](https://fixer.io/signup)
 
 ### ExchangeRate-API
-Free currency conversion API with 161 currencies
+
+Free currency conversion API with 161 currencies.
 
 **Human URL:** [https://www.exchangerate-api.com](https://www.exchangerate-api.com)
 
+**Base URL:** https://v6.exchangerate-api.com/v6
 
 #### Tags:
 
- - free, exchange rates, currency conversion
+ - Currency Conversion
+ - Exchange Rates
 
 #### Properties
 
@@ -65,40 +77,46 @@ Free currency conversion API with 161 currencies
 - [Terms of Service](https://www.exchangerate-api.com/terms)
 
 ### CurrencyAPI
-Accurate and reliable foreign exchange rates API
+
+Accurate and reliable foreign exchange rates API.
 
 **Human URL:** [https://currencyapi.com](https://currencyapi.com)
 
+**Base URL:** https://api.currencyapi.com/v3
 
 #### Tags:
 
- - forex, real-time rates, historical data
+ - Forex
+ - Historical Data
+ - Real-Time Rates
 
 #### Properties
 
 - [Documentation](https://currencyapi.com/docs)
-- [OpenAPI](https://currencyapi.com/openapi.json)
 - [Pricing](https://currencyapi.com/pricing)
 - [Status](https://status.currencyapi.com)
 
 ### Frankfurter API
-Free and open-source API for current and historical forex rates
+
+Free and open-source API for current and historical forex rates.
 
 **Human URL:** [https://www.frankfurter.app](https://www.frankfurter.app)
 
+**Base URL:** https://api.frankfurter.app
 
 #### Tags:
 
- - free, open source, ECB, exchange rates
+ - Exchange Rates
+ - Free
+ - Open Source
 
 #### Properties
 
 - [Documentation](https://www.frankfurter.app/docs)
-- [GitHub](https://github.com/hakanensari/frankfurter)
-- [OpenAPI](https://www.frankfurter.app/openapi.json)
+- [GitHub Organization](https://github.com/hakanensari/frankfurter)
 
 ## Maintainers
 
-**FN:** Forex API Directory
+**FN:** Kin Lane
 
-**Email:** contact@forexapis.example.com
+**Email:** kin@apievangelist.com
