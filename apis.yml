@@ -32,6 +32,8 @@ apis:
         url: https://openexchangerates.org/signup
       - type: Authentication
         url: https://docs.openexchangerates.org/authentication
+      - url: openapi/forex-openapi.yml
+        type: OpenAPI
   - aid: forex:fixer
     name: Fixer.io API
     description: >-
