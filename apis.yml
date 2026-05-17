@@ -62,7 +62,7 @@ apis:
         url: https://www.exchangerate-api.com/docs
       - type: Pricing
         url: https://www.exchangerate-api.com/pricing
-      - type: Terms of Service
+      - type: TermsOfService
         url: https://www.exchangerate-api.com/terms
   - aid: forex:currencyapi
     name: CurrencyAPI
@@ -79,7 +79,7 @@ apis:
         url: https://currencyapi.com/docs
       - type: Pricing
         url: https://currencyapi.com/pricing
-      - type: Status
+      - type: StatusPage
         url: https://status.currencyapi.com
   - aid: forex:frankfurter
     name: Frankfurter API
@@ -94,7 +94,7 @@ apis:
     properties:
       - type: Documentation
         url: https://www.frankfurter.app/docs
-      - type: GitHub Organization
+      - type: GitHubOrganization
         url: https://github.com/hakanensari/frankfurter
 maintainers:
   - FN: Kin Lane
