@@ -1,0 +1,222 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Open Exchange Rates API — Rates
+  description: 'Open Exchange Rates API — Rates. 3 operations. Lead operation: Convert an amount between two currencies. Self-contained
+    Naftiko capability covering one Forex business surface.'
+  tags:
+  - Forex
+  - Rates
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    FOREX_API_KEY: FOREX_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: forex-rates
+    baseUri: https://openexchangerates.org/api
+    description: Open Exchange Rates API — Rates business capability. Self-contained, no shared references.
+    resources:
+    - name: convert-value-from-to
+      path: /convert/{value}/{from}/{to}
+      operations:
+      - name: convertcurrency
+        method: GET
+        description: Convert an amount between two currencies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: value
+          in: path
+          type: number
+          required: true
+        - name: from
+          in: path
+          type: string
+          required: true
+        - name: to
+          in: path
+          type: string
+          required: true
+        - name: app_id
+          in: query
+          type: string
+          required: true
+        - name: prettyprint
+          in: query
+          type: boolean
+    - name: historical-date}.json
+      path: /historical/{date}.json
+      operations:
+      - name: gethistoricalrates
+        method: GET
+        description: Get historical exchange rates for a given date
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: date
+          in: path
+          type: string
+          required: true
+        - name: app_id
+          in: query
+          type: string
+          required: true
+        - name: base
+          in: query
+          type: string
+        - name: symbols
+          in: query
+          type: string
+    - name: latest.json
+      path: /latest.json
+      operations:
+      - name: getlatestrates
+        method: GET
+        description: Get the latest exchange rates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: app_id
+          in: query
+          type: string
+          required: true
+        - name: base
+          in: query
+          type: string
+        - name: symbols
+          in: query
+          type: string
+        - name: prettyprint
+          in: query
+          type: boolean
+        - name: show_alternative
+          in: query
+          type: boolean
+    authentication:
+      type: apikey
+      key: app_id
+      value: '{{env.FOREX_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: forex-rates-rest
+    port: 8080
+    description: REST adapter for Open Exchange Rates API — Rates. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/convert/{value}/{from}/{to}
+      name: convert-value-from-to
+      description: REST surface for convert-value-from-to.
+      operations:
+      - method: GET
+        name: convertcurrency
+        description: Convert an amount between two currencies
+        call: forex-rates.convertcurrency
+        with:
+          value: rest.value
+          from: rest.from
+          to: rest.to
+          app_id: rest.app_id
+          prettyprint: rest.prettyprint
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/historical/date-json
+      name: historical-date-json
+      description: REST surface for historical-date}.json.
+      operations:
+      - method: GET
+        name: gethistoricalrates
+        description: Get historical exchange rates for a given date
+        call: forex-rates.gethistoricalrates
+        with:
+          date: rest.date
+          app_id: rest.app_id
+          base: rest.base
+          symbols: rest.symbols
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/latest-json
+      name: latest-json
+      description: REST surface for latest.json.
+      operations:
+      - method: GET
+        name: getlatestrates
+        description: Get the latest exchange rates
+        call: forex-rates.getlatestrates
+        with:
+          app_id: rest.app_id
+          base: rest.base
+          symbols: rest.symbols
+          prettyprint: rest.prettyprint
+          show_alternative: rest.show_alternative
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: forex-rates-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Open Exchange Rates API — Rates. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: convert-amount-between-two-currencies
+      description: Convert an amount between two currencies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: forex-rates.convertcurrency
+      with:
+        value: tools.value
+        from: tools.from
+        to: tools.to
+        app_id: tools.app_id
+        prettyprint: tools.prettyprint
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-historical-exchange-rates-given
+      description: Get historical exchange rates for a given date
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: forex-rates.gethistoricalrates
+      with:
+        date: tools.date
+        app_id: tools.app_id
+        base: tools.base
+        symbols: tools.symbols
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-latest-exchange-rates
+      description: Get the latest exchange rates
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: forex-rates.getlatestrates
+      with:
+        app_id: tools.app_id
+        base: tools.base
+        symbols: tools.symbols
+        prettyprint: tools.prettyprint
+        show_alternative: tools.show_alternative
+      outputParameters:
+      - type: object
+        mapping: $.

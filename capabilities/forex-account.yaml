@@ -1,0 +1,81 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Open Exchange Rates API — Account
+  description: 'Open Exchange Rates API — Account. 1 operations. Lead operation: Get account usage statistics. Self-contained
+    Naftiko capability covering one Forex business surface.'
+  tags:
+  - Forex
+  - Account
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    FOREX_API_KEY: FOREX_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: forex-account
+    baseUri: https://openexchangerates.org/api
+    description: Open Exchange Rates API — Account business capability. Self-contained, no shared references.
+    resources:
+    - name: usage.json
+      path: /usage.json
+      operations:
+      - name: getusage
+        method: GET
+        description: Get account usage statistics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: app_id
+          in: query
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: app_id
+      value: '{{env.FOREX_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: forex-account-rest
+    port: 8080
+    description: REST adapter for Open Exchange Rates API — Account. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/usage-json
+      name: usage-json
+      description: REST surface for usage.json.
+      operations:
+      - method: GET
+        name: getusage
+        description: Get account usage statistics
+        call: forex-account.getusage
+        with:
+          app_id: rest.app_id
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: forex-account-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Open Exchange Rates API — Account. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: get-account-usage-statistics
+      description: Get account usage statistics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: forex-account.getusage
+      with:
+        app_id: tools.app_id
+      outputParameters:
+      - type: object
+        mapping: $.
