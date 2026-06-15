@@ -1,0 +1,187 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open Exchange Rates API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "app_id",
+      "value": "{{app_id}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the latest exchange rates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/latest.json",
+            "params": [
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "base",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbols",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "prettyprint",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "show_alternative",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the latest exchange rates"
+        },
+        {
+          "info": {
+            "name": "Get historical exchange rates for a given date",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/historical/:date.json",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "base",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbols",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get historical exchange rates for a given date"
+        },
+        {
+          "info": {
+            "name": "Convert an amount between two currencies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/convert/:value/:from/:to",
+            "params": [
+              {
+                "name": "value",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "prettyprint",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Convert an amount between two currencies"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reference",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available currencies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/currencies.json",
+            "params": [
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List available currencies"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get account usage statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/usage.json",
+            "params": [
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get account usage statistics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

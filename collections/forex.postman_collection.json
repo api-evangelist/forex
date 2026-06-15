@@ -1,0 +1,610 @@
+{
+  "item": [
+    {
+      "id": "6edb1b87-4e27-4f25-bfea-b1d65ffaaf8d",
+      "name": "Rates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "64202aef-db93-4a35-8535-b21bfcef9978",
+          "name": "Get the latest exchange rates",
+          "request": {
+            "name": "Get the latest exchange rates",
+            "description": {},
+            "url": {
+              "path": [
+                "latest.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "base",
+                  "value": "USD"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbols",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "prettyprint",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_alternative",
+                  "value": "false"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "62af4614-df52-4b70-a6a4-4e20320b1b76",
+              "name": "Latest rates",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "base",
+                      "value": "USD"
+                    },
+                    {
+                      "key": "symbols",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "prettyprint",
+                      "value": "false"
+                    },
+                    {
+                      "key": "show_alternative",
+                      "value": "false"
+                    },
+                    {
+                      "key": "app_id",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fecbce55-1540-486c-acad-52e18e2c8c25",
+          "name": "Get historical exchange rates for a given date",
+          "request": {
+            "name": "Get historical exchange rates for a given date",
+            "description": {},
+            "url": {
+              "path": [
+                "historical",
+                "{{date}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "base",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbols",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9b97b45-2847-40a7-9345-0f24953105ed",
+              "name": "Historical rates",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "historical",
+                    "{{date}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "base",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "symbols",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "app_id",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "26bdee58-eaf0-4843-819b-c197a0407b8b",
+          "name": "Convert an amount between two currencies",
+          "request": {
+            "name": "Convert an amount between two currencies",
+            "description": {},
+            "url": {
+              "path": [
+                "convert",
+                ":value",
+                ":from",
+                ":to"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "prettyprint",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "value",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "from",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "to",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d369b0ce-e7da-433e-a2e3-b726cfc40661",
+              "name": "Conversion result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "convert",
+                    ":value",
+                    ":from",
+                    ":to"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "prettyprint",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "app_id",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "value",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "from",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "to",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8f31099e-0f74-4db3-891a-1d318955ff5e",
+      "name": "Reference",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "662bac0c-8278-4986-8705-a400da6a2840",
+          "name": "List available currencies",
+          "request": {
+            "name": "List available currencies",
+            "description": {},
+            "url": {
+              "path": [
+                "currencies.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1a26c070-cb89-44d8-9763-c925faec3cfd",
+              "name": "Currency list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "currencies.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "app_id",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5873ca1e-601a-4bd1-9102-9cb5d6c664a2",
+      "name": "Account",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0da1f7a9-375d-4eae-b820-056184e9f746",
+          "name": "Get account usage statistics",
+          "request": {
+            "name": "Get account usage statistics",
+            "description": {},
+            "url": {
+              "path": [
+                "usage.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad0bb642-c053-4394-835f-d5e7fc29cf55",
+              "name": "Usage statistics",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "usage.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "app_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "app_id",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://openexchangerates.org/api",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<date>",
+      "key": "date"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "app_id"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ad02ae6b-7e14-46aa-955d-b2c435115137",
+    "name": "Open Exchange Rates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI description of the Open Exchange Rates JSON API for real-time and historical foreign exchange rates. The first API entry in the forex.apis.yml index.",
+      "type": "text/plain"
+    }
+  }
+}
