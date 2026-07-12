@@ -94,3 +94,8 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 common: []
+common:
+- type: DomainSecurity
+  url: security/forex-domain-security.yml
+- type: Authentication
+  url: authentication/forex-authentication.yml
