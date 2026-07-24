@@ -1,0 +1,129 @@
+openapi: 3.1.0
+info:
+  title: Open Exchange Account Rates API
+  version: 1.0.0
+  description: Minimal OpenAPI description of the Open Exchange Rates JSON API for real-time and historical foreign exchange rates. The first API entry in the forex.apis.yml index.
+  x-generated-from: https://docs.openexchangerates.org
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://openexchangerates.org/api
+security:
+- appIdQuery: []
+tags:
+- name: Rates
+paths:
+  /latest.json:
+    get:
+      tags:
+      - Rates
+      summary: Get the latest exchange rates
+      operationId: getLatestRates
+      parameters:
+      - in: query
+        name: app_id
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: base
+        schema:
+          type: string
+          default: USD
+      - in: query
+        name: symbols
+        schema:
+          type: string
+      - in: query
+        name: prettyprint
+        schema:
+          type: boolean
+          default: false
+      - in: query
+        name: show_alternative
+        schema:
+          type: boolean
+          default: false
+      responses:
+        '200':
+          description: Latest rates
+          content:
+            application/json:
+              schema:
+                type: object
+  /historical/{date}.json:
+    get:
+      tags:
+      - Rates
+      summary: Get historical exchange rates for a given date
+      operationId: getHistoricalRates
+      parameters:
+      - in: path
+        name: date
+        required: true
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: app_id
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: base
+        schema:
+          type: string
+      - in: query
+        name: symbols
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Historical rates
+          content:
+            application/json:
+              schema:
+                type: object
+  /convert/{value}/{from}/{to}:
+    get:
+      tags:
+      - Rates
+      summary: Convert an amount between two currencies
+      operationId: convertCurrency
+      parameters:
+      - in: path
+        name: value
+        required: true
+        schema:
+          type: number
+      - in: path
+        name: from
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: to
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: app_id
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: prettyprint
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Conversion result
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    appIdQuery:
+      type: apiKey
+      in: query
+      name: app_id

@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  title: Open Exchange Rates Account API
+  version: 1.0.0
+  description: Minimal OpenAPI description of the Open Exchange Rates JSON API for real-time and historical foreign exchange rates. The first API entry in the forex.apis.yml index.
+  x-generated-from: https://docs.openexchangerates.org
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://openexchangerates.org/api
+security:
+- appIdQuery: []
+tags:
+- name: Account
+paths:
+  /usage.json:
+    get:
+      tags:
+      - Account
+      summary: Get account usage statistics
+      operationId: getUsage
+      parameters:
+      - in: query
+        name: app_id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Usage statistics
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    appIdQuery:
+      type: apiKey
+      in: query
+      name: app_id
