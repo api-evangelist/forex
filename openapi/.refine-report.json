@@ -1,0 +1,18 @@
+{
+  "provider": "forex",
+  "sources": [
+    "forex-account-api-openapi.yml",
+    "forex-rates-api-openapi.yml",
+    "forex-reference-api-openapi.yml"
+  ],
+  "outputs": [
+    "forex-account-api-openapi.yml",
+    "forex-rates-api-openapi.yml",
+    "forex-reference-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
