@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open Exchange Rates Account Reference API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "app_id",
+      "value": "{{app_id}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reference",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available currencies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/currencies.json",
+            "params": [
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List available currencies"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

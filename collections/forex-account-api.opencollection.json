@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open Exchange Rates Account API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "app_id",
+      "value": "{{app_id}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get account usage statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openexchangerates.org/api/usage.json",
+            "params": [
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get account usage statistics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
