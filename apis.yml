@@ -79,6 +79,10 @@ apis:
   tags:
   - Exchange Rates
   - Free
+  - Open-Source
+  tags_raw:
+  - Exchange Rates
+  - Free
   - Open Source
   properties:
   - type: Documentation
