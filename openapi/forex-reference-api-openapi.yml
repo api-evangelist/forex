@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Open Exchange Rates Account Reference API
+  title: Open Exchange Rates Reference API
   version: 1.0.0
   description: Minimal OpenAPI description of the Open Exchange Rates JSON API for real-time and historical foreign exchange rates. The first API entry in the forex.apis.yml index.
   x-generated-from: https://docs.openexchangerates.org
