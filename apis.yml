@@ -92,11 +92,12 @@ apis:
   tags:
   - Exchange Rates
   - Free
-  - Open-Source
+  - Open Source
   tags_raw:
   - Exchange Rates
   - Free
   - Open Source
+  - Open-Source
   properties:
   - type: Documentation
     url: https://www.frankfurter.app/docs
