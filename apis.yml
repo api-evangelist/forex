@@ -156,6 +156,12 @@ maintainers:
     email: kin@apievangelist.com
 common: []
 common:
+- type: Plans
+  url: plans/forex-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/forex-rate-limits.yml
+- type: FinOps
+  url: finops/forex-finops.yml
 - type: AgenticAccess
   url: agentic-access/forex-agentic-access.yml
 - type: DomainSecurity
