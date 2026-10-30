@@ -1,4 +1,4 @@
-# Forex (forex)
+# Forex
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,130 +66,80 @@
 
 A collection of foreign exchange and currency conversion APIs.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/forex/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/forex/refs/heads/main/apis.yml)
+**Areas:** Currency · Exchange Rates · Financial Data · Foreign Exchange · Trading
 
-## Scope
+## Forex on APIs.io
 
-- **Type:** Index
+Everything profiled for Forex is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/forex/](https://apis.io/providers/forex/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Currency
-- Exchange Rates
-- Financial Data
-- Forex
-- Trading
+- [Fixer.io API](https://apis.io/apis/forex/fixer/) — Foreign exchange rates and currency conversion API.
+- [ExchangeRate-API](https://apis.io/apis/forex/exchangerate-api/) — Free currency conversion API with 161 currencies.
+- [CurrencyAPI](https://apis.io/apis/forex/currencyapi/) — Accurate and reliable foreign exchange rates API.
+- [Frankfurter API](https://apis.io/apis/forex/frankfurter/) — Free and open-source API for current and historical forex rates.
+- [Forex Account API](https://apis.io/apis/forex/forex-account-api/) — The Account API from Forex — 1 operation(s) for account.
+- [Forex Rates API](https://apis.io/apis/forex/forex-rates-api/) — The Rates API from Forex — 3 operation(s) for rates.
+- [Forex Reference API](https://apis.io/apis/forex/forex-reference-api/) — The Reference API from Forex — 1 operation(s) for reference.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Open Exchange Rates API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Real-time and historical exchange rates with simple JSON API.
+- [Forex Agentic Access](https://apis.io/agentic-access/forex/forex-agentic-access/)
 
-- **Human URL:** [https://openexchangerates.org](https://openexchangerates.org)
-- **Base URL:** `https://openexchangerates.org/api`
+#### Collections (4)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Currency Conversion
-- Exchange Rates
-- Historical Data
+- [Open Exchange Rates API](https://apis.io/collections/forex/open-forex/)
+- [Open Exchange Rates Account API](https://apis.io/collections/forex/open-forex-account-api/)
+- [Open Exchange Account Rates API](https://apis.io/collections/forex/open-forex-rates-api/)
+- [Open Exchange Rates Account Reference API](https://apis.io/collections/forex/open-forex-reference-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://docs.openexchangerates.org)
-- [Pricing](https://openexchangerates.org/signup)
-- [Authentication](https://docs.openexchangerates.org/authentication)
-- [OpenAPI](openapi/forex-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/forex.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/forex.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Fixer.io API
+- [Forex Authentication](https://apis.io/security/forex/forex-authentication/)
+- [Forex Domain Security](https://apis.io/security/forex/forex-domain-security/)
 
-Foreign exchange rates and currency conversion API.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://fixer.io](https://fixer.io)
-- **Base URL:** `https://api.fixer.io`
+Published plans, tiers and prices.
 
-#### Tags
+- [Forex Plans Pricing](https://apis.io/plans/forex/forex-plans-pricing/)
 
-- Currency
-- Exchange Rates
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://fixer.io/documentation)
-- [Pricing](https://fixer.io/product)
-- [Postman Collection](collections/forex.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/forex.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Forex Rate Limits](https://apis.io/rate-limits/forex/forex-rate-limits/)
 
-### ExchangeRate-API
+#### FinOps (1)
 
-Free currency conversion API with 161 currencies.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://www.exchangerate-api.com](https://www.exchangerate-api.com)
-- **Base URL:** `https://v6.exchangerate-api.com/v6`
+- [Forex Finops](https://apis.io/finops/forex/forex-finops/)
 
-#### Tags
+## API Evangelist rating
 
-- Currency Conversion
-- Exchange Rates
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
 
-#### Properties
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
 
-- [Documentation](https://www.exchangerate-api.com/docs)
-- [Pricing](https://www.exchangerate-api.com/pricing)
-- [Terms of Service](https://www.exchangerate-api.com/terms)
-- [Postman Collection](collections/forex.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/forex.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## How this profile is made
 
-### CurrencyAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-Accurate and reliable foreign exchange rates API.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Forex: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- **Human URL:** [https://currencyapi.com](https://currencyapi.com)
-- **Base URL:** `https://api.currencyapi.com/v3`
+## Open an issue
 
-#### Tags
-
-- Forex
-- Historical Data
-- Real-Time Rates
-
-#### Properties
-
-- [Documentation](https://currencyapi.com/docs)
-- [Pricing](https://currencyapi.com/pricing)
-- [Status Page](https://status.currencyapi.com)
-- [Postman Collection](collections/forex.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/forex.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Frankfurter API
-
-Free and open-source API for current and historical forex rates.
-
-- **Human URL:** [https://www.frankfurter.app](https://www.frankfurter.app)
-- **Base URL:** `https://api.frankfurter.app`
-
-#### Tags
-
-- Exchange Rates
-- Free
-- Open Source
-
-#### Properties
-
-- [Documentation](https://www.frankfurter.app/docs)
-- [GitHub Organization](https://github.com/hakanensari/frankfurter)
-- [Postman Collection](collections/forex.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/forex.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/forex/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
